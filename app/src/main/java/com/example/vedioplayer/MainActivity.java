@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             ActivityCompat.requestPermissions(MainActivity.this,new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},1);
         }else {
             initVideoPath();
-        }
+        }                               //初始化权限
 
 
 
@@ -79,17 +79,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (view.getId()){
             case R.id.play:
                 if (!videoView.isPlaying()){
-                    videoView.start();
+                    videoView.start();                          //开始播放
                 }
                 break;
             case R.id.pause:
                 if (videoView.isPlaying()){
-                    videoView.pause();
+                    videoView.pause();                          //暂停播放
                 }
                 break;
             case R.id.replay:
                 if (videoView.isPlaying()){
-                    videoView.resume();
+                    videoView.resume();                         //重新播放
                 }
                 break;
         }
